@@ -1,7 +1,7 @@
-import { db } from "../db";
+import db from "../db";
 
 export const getUsers = (_, res) => {
-    const q = "select * from usuarios"
+    const q = "SELECT * FROM crud.usuario"
 
     db.query(q, (err, data) => {
         if (err) return res.json(err)
